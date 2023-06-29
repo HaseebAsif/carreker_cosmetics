@@ -1,0 +1,235 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.brand img {
+  width: 12rem;
+}
+.video-1 {
+  width: 60vw;
+  height: 120vh;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+.navbar-toggle {
+  display: none;
+}
+
+.toggle-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hero Section styles */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About Section styles */
+.about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  width: 70%;
+  margin: auto;
+}
+
+/* Video Section styles */
+.video {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.video-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.video-grid {
+  display: grid;
+  gap: 30px;
+  place-items: center;
+  margin: auto;
+  width: 100%;
+}
+.about-subheading {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+}
+.video-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  /* Styles for each video item */
+}
+
+/* Contact Section styles */
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  /* Styles for the contact form */
+}
+
+/* Footer Section styles */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .video-1 {
+    width: 95%;
+  }
+  .about-content p {
+    width: 95%;
+  }
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .navbar-menu.active li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-menu.active li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
